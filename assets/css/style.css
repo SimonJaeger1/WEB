@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* - - - - - - - - - - - - - - ALLGEMEINE BODY EIGENSCHAFTEN - - - - - - - - - - - - - - -  */
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: url("../img/background.jpg");
+    /* Background entsprechend der Screengröße skalieren */
+    background-size: cover;
+    /* Background zentrieren */
+    background-position: center;
+    /* Background Wiederholung deaktivieren */
+    background-repeat: no-repeat;
+    /* Background fixieren */
+    background-attachment: fixed;
+}
+
+body main {
+    min-height: calc(100vh - 56px);
+    /* Passt die Höhe an, unter Berücksichtigung der Navbar (56px Höhe) */
+    padding: 16px;
+}
+
+.textblock {
+    font-size: 12px;
+}
+
+/* - - - - - - - - - - - - - - INDEX/HOME - - - - - - - - - - - - - - -  */
+
+.allura {
+    font-family: 'Allura', 'sans-serif';
+}
+
+/* - - - - - - - - - - - - - - IMPRESSUM - - - - - - - - - - - - - - -   */
+
+.impressum div {
+    /*background verbessert den Kontrast (Accessibility)*/
+    background: rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(0.5px);
+}
+
+/* - - - - - - - - - - - - - - HELP - - - - - - - - - - - - - - -   */
+
+.help [class^="col"] {
+    padding: 16px;
+    margin-bottom: 16px;
+    background: rgba(0, 0, 0, .3);
+    backdrop-filter: blur(3px);
+}
+
+@media (min-width: 576px) {
+    .help [class^="col"] {
+        border-radius: 30px;
+    }
+}
+
+@media (min-width: 992px) {
+    .help [class^="col"] {
+        border-radius: 30px;
+        max-width: 20%;
+        /* Begrenzt die Breite der einzelnen Helpboxen auf 20% der Gesamtbreite */
+    }
+}
+
+/* - - - - - - - - - - - - - - REGISTRIERUNG, LOGIN, RESERVIERUNG, NEWS - - - - - - - - - - - - - - -  */
+
+.sign-up form,
+.login form,
+.reservation form,
+.news form {
+    padding: 20px;
+    max-width: 400px;
+    background: rgba(255, 255, 255, .3);
+    border-radius: 30px;
+    backdrop-filter: blur(3px);
+}
+
+.sign-up .error,
+.reservation .error,
+.news .error {
+    color: red;
+    font-size: 0.7em;
+}
+
+.sign-up h1,
+.login h1,
+.reservation h1,
+.news h1 {
+    margin-bottom: 30px;
+}
+
+.login .form-group,
+.sign-up .form-group,
+.reservation .form-group {
+    margin-bottom: 20px;
+}
+
+.btn-dark {
+    background: rgba(0, 0, 0, .3);
+    border: none;
+}
+
+.login form a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.fs-7 {
+    font-size: .7em;
+}
